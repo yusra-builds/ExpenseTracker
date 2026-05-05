@@ -1,0 +1,59 @@
+#Expense tracking system
+
+ExpenseList = []
+
+print("Welcome to expense tracker!")
+
+while True:
+    print("\n 1. Add expense.")
+    print('2. View all expenses')
+    print('3. View Total spending')
+    print('4. Exit')
+    
+    choice = input('\n Enter your choice(1/2/3/4):')
+
+#For adding expenses
+    if choice == "1":
+        date = input('\n Enter date:')
+        category = input('Enter category:')
+        description = input('Write description:')
+        amount = float(input('Enter amount:'))
+        
+        expenses = { "date" : date,
+        "category" : category,
+        "description" : description,
+        "amount" : amount}
+        
+        ExpenseList.append(expenses)
+        
+        print("\n Expenses added successfully!")
+        
+#For viewing all expenses
+    elif choice == "2":
+        
+        count = 1
+        for kharcha in ExpenseList:
+            print("\n Expense number:" , count, "-->" , "\n" , "Date:" , kharcha["date"],  "\n" , "Category:" , kharcha["category"], "\n" , "Description:" , kharcha["description"], "\n"  , "Amount:" , kharcha["amount"])
+            count = count+1
+            
+            print("________________")
+            
+#for calculating total spending            
+    elif choice == "3":
+        total = 0
+        for e in ExpenseList:
+            total += e["amount"]
+        
+        print("\n Total spending:" , total)
+        
+           
+           
+#for ending expense tracker            
+    elif choice == "4":
+        print("\n Thanks for using expense tracker. Bye!")
+        break
+#if user enters invalid input       
+    else:
+        print("Invalid choice. Please try again.")
+        
+
