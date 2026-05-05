@@ -6,7 +6,7 @@ I faced many errors while creating this project such as i forgot " in conditiona
 This program contains conditional statements if else, loops and dictionaries and list.
 This project tracks individual expenses. It includes daily expenses, it calculates total spending, it shows total expenses.
 
-#how this program works
+# how this program works
 While loop is used to repeat the menu until user exists.
 Conditional statements used to handle menu options
 List to store multiple expenses.
